@@ -1,0 +1,3 @@
+//uses of backtik:
+console.log(`Total money required: ${res} tk`);
+// Output: Total money required: 345000 tk.

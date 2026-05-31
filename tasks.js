@@ -19,18 +19,16 @@ console.log(result1);
 // Task -2:
 // Find the friend with the smallest name.
 const friends = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];
-function smallest(names){
-    let small=names[0]
-    for(let name of names)
-    {
-        if(name.length<small.length)
-        {
-            small=name;
+function smallest(names) {
+    let small = names[0]
+    for (let name of names) {
+        if (name.length < small.length) {
+            small = name;
         }
     }
     return small;
 }
-const result2=smallest(friends);
+const result2 = smallest(friends);
 console.log(result2);
 
 
@@ -42,23 +40,47 @@ console.log(result2);
 //     mobile = 20000 tk
 // Write a JavaScript function named calculateElectronicsBudget that takes in the number of laptop, tablets, and mobile and returns the total money required.
 
+function calculateElectronicsBudget(laptop, tablet, mobile) {
+    const laptopPrice = 35000;
+    const tabletPrice = 15000;
+    const mobilePrice = 20000;
+    const totalCost = laptopPrice * laptop + tabletPrice * tablet + mobilePrice * mobile;
+    return totalCost;
+}
 
+const res = calculateElectronicsBudget(3, 5, 6);
+console.log(`Total money required: ${res} tk`);
 
 
 // Task-4:
 // You are given an array of phone objects, each containing information about the model, brand, and price. Your task is to write a JavaScript function named findAveragePhonePrice that takes this array as input and returns the average price of phone.
 
-// Input
+// Input 
+function findAveragePhonePrice(mobiles) {
+    // console.log(mobiles.length);
+    let sum=0;
+
+    for(let mobile of mobiles){
+       sum=sum+mobile.price;       
+    }
+    return sum/mobiles.length;
+
+}
+const phones = [
+    { model: "PhoneA", brand: "Iphone", price: 95000 },
+    { model: "PhoneB", brand: "Samsung", price: 40000 },
+    { model: "PhoneC", brand: "Oppo", price: 26000 },
+    { model: "PhoneD", brand: "Nokia", price: 35000 },
+    { model: "PhoneE", brand: "Iphone", price: 105000 },
+    { model: "PhoneF", brand: "HTC", price: 48000 },
+];
+const result4 = findAveragePhonePrice(phones);
+console.log(`Average price of the phone is ${result4.toFixed(2)} tk`);
 
 
-//     const phones = [
-//         { model: "PhoneA", brand: "Iphone", price: 95000 },
-//         { model: "PhoneB", brand: "Samsung", price: 40000 },
-//         { model: "PhoneC", brand: "Oppo", price: 26000 },
-//         { model: "PhoneD", brand: "Nokia", price: 35000 },
-//         { model: "PhoneE", brand: "Iphone", price: 105000 },
-//         { model: "PhoneF", brand: "HTC", price: 48000 },
-//     ];
+
+
+
 // Task -5: (Hard)
 // For each employee their current salary is calculated by multiplying yearly increment with experience then adding the result to the starting salary. Now calculate is the total salary has to be provided by the company in a month.
 
