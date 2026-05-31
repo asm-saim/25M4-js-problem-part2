@@ -18,7 +18,21 @@ console.log(result1);
 
 // Task -2:
 // Find the friend with the smallest name.
-// const heights2 = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];
+const friends = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];
+function smallest(names){
+    let small=names[0]
+    for(let name of names)
+    {
+        if(name.length<small.length)
+        {
+            small=name;
+        }
+    }
+    return small;
+}
+const result2=smallest(friends);
+console.log(result2);
+
 
 // Task-3:
 // Your task is to calculate the total budget required to buy electronics:
@@ -27,6 +41,9 @@ console.log(result1);
 //     tablet = 15000 tk
 //     mobile = 20000 tk
 // Write a JavaScript function named calculateElectronicsBudget that takes in the number of laptop, tablets, and mobile and returns the total money required.
+
+
+
 
 // Task-4:
 // You are given an array of phone objects, each containing information about the model, brand, and price. Your task is to write a JavaScript function named findAveragePhonePrice that takes this array as input and returns the average price of phone.
